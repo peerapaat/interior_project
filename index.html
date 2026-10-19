@@ -251,6 +251,41 @@ li::before{content:"";position:absolute;left:0;top:.95em;width:.7em;height:1px;b
 .function-card-name{font:300 clamp(16px,1.65vw,26px)/1.22 var(--head);letter-spacing:.025em;color:var(--text)}
 @media(max-width:760px){.function-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.function-centered{align-items:flex-start}.function-card{min-height:100px}.function-card-name{font-size:clamp(19px,3.3vw,25px)}}
 @media(max-width:430px){.function-card-grid{grid-template-columns:1fr}.function-card{min-height:78px}.function-centered .title{font-size:clamp(54px,13vw,78px)}}
+
+/* USER NEEDS — เพิ่มหน้าเดียวโดยคงธีมเดิม */
+.needs-layout{position:absolute;inset:9vh var(--pad) 8vh;display:grid;grid-template-columns:1.25fr .8fr;gap:5vw;align-items:center}
+.needs-heading{font:300 clamp(52px,7vw,112px)/.9 var(--head);letter-spacing:.04em;margin:0 0 3vh}
+.needs-intro{font:300 clamp(13px,1.1vw,17px)/1.7 var(--thai);color:var(--text2);margin:0 0 3vh;max-width:650px}
+.needs-item{padding:12px 0;border-top:1px solid rgba(246,235,221,.22)}
+.needs-item strong{display:block;color:var(--accent);font:400 clamp(12px,1vw,15px)/1.5 var(--thai);margin-bottom:3px}
+.needs-item p{margin:0;color:var(--text2);font:300 clamp(12px,1vw,16px)/1.6 var(--thai)}
+.needs-visual{position:relative;height:68vh;min-height:280px}
+.needs-visual .photo{inset:0;border-radius:180px 180px 0 0}
+.needs-photo-caption{position:absolute;bottom:0;left:0;right:0;padding:45px 18px 17px;background:linear-gradient(transparent,rgba(16,8,11,.9));pointer-events:none;font:400 12px var(--thai)}
+@media(max-width:800px){.needs-layout{inset:7vh 20px 5vh;grid-template-columns:1fr;gap:2vh;align-content:start;overflow-y:auto}.needs-heading{font-size:52px;margin-bottom:2vh}.needs-intro{margin-bottom:2vh}.needs-item{padding:8px 0}.needs-visual{height:26vh;min-height:180px}.needs-visual .photo{border-radius:110px 110px 0 0}}
+
+/* คำอธิบายแนวคิด Mood & Tone */
+.mood-description{max-width:min(690px,85vw);margin:2.2vh auto 0;padding:13px 22px;background:rgba(19,12,13,.68);border:1px solid rgba(246,235,221,.22);border-radius:5px;color:#fff3e6;font:300 clamp(13px,1.1vw,18px)/1.75 var(--thai);text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.slide.mood-slide .mid{padding-bottom:4vh}
+.slide.mood-slide .palette{bottom:8vh}
+@media(max-width:800px){.mood-description{font-size:13px;max-width:88vw;padding:10px 13px}.slide.mood-slide .palette{bottom:5vh;gap:12px}}
+
+/* ชื่อสไตล์บ้านในหน้า Mood & Tone */
+.mood-style-label{display:inline-block;margin:1.4vh auto .3vh;padding:7px 20px;border:1px solid rgba(255,178,124,.65);background:rgba(19,12,13,.68);color:#ffca9e;font:400 clamp(14px,1.5vw,23px)/1.4 var(--mono);letter-spacing:.2em}
+@media(max-width:800px){.mood-style-label{font-size:13px;padding:6px 12px;letter-spacing:.1em}}
+
+/* Special Function: แยกกิจกรรมให้ชัด โดยไม่เพิ่มสไลด์และไม่เปลี่ยนภาพเดิม */
+.special-zones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:min(1020px,90vw);margin:3vh auto 0;text-align:left}
+.special-zone{background:rgba(19,12,13,.82);border:1px solid rgba(246,235,221,.32);padding:clamp(14px,1.8vw,24px);border-top:2px solid var(--accent);min-height:165px}
+.special-zone .en{display:block;font:400 clamp(10px,.9vw,13px)/1.4 var(--mono);letter-spacing:.13em;color:var(--accent);margin-bottom:10px}
+.special-zone strong{display:block;font:400 clamp(15px,1.5vw,22px)/1.5 var(--thai);margin-bottom:8px;color:#fff3e6}
+.special-zone p{margin:0;font:300 clamp(12px,1.03vw,16px)/1.65 var(--thai);color:#f6ebdd}
+.special-intro{font:300 clamp(13px,1.15vw,18px)/1.6 var(--thai);margin:2vh 0 0;color:#fff3e6;text-shadow:0 2px 12px #000}
+@media(max-width:800px){.special-zones{grid-template-columns:1fr;gap:8px;width:88vw;margin:2vh auto 0}.special-zone{min-height:0;padding:10px 14px}.special-zone .en{margin-bottom:3px}.special-zone strong{margin-bottom:2px;font-size:15px}.special-zone p{font-size:12px;line-height:1.4}.special-intro{font-size:12px}.slide.special-slide .title.big{font-size:clamp(44px,9vw,72px)}}
+/* คำอธิบายเหตุผลการเลือกแบบห้อง หน้า 7–17 */
+.room-description{max-width:min(680px,86vw);margin:2.2vh auto 0;padding:13px 21px;background:rgba(19,12,13,.73);border:1px solid rgba(246,235,221,.23);border-radius:5px;color:#fff3e6;font:300 clamp(13px,1.12vw,18px)/1.75 var(--thai);text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.slide.room-slide .mid{padding:0 16px 3vh}
+@media(max-width:800px){.room-description{max-width:90vw;font-size:13px;padding:10px 13px}}
 </style>
 </head>
 <body>
@@ -262,7 +297,7 @@ li::before{content:"";position:absolute;left:0;top:.95em;width:.7em;height:1px;b
 <main id="deck"></main>
 <div id="room-lightbox" class="room-lightbox" role="dialog" aria-modal="true" aria-label="ดูรูปห้องขนาดใหญ่"><button class="lb-close" type="button" aria-label="ปิดภาพ">×</button><img alt="รูปห้องขนาดใหญ่"><a class="lb-source" target="_blank" rel="noopener noreferrer" hidden>↗ IMAGE SOURCE</a></div>
 
-<div class="hud hud-top mono"><span id="cap">Cover</span><span id="count">01 / 17</span></div>
+<div class="hud hud-top mono"><span id="cap">Cover</span><span id="count">01 / 18</span></div>
 <div class="hud hud-bottom"><button id="prev" aria-label="ก่อนหน้า">&larr;</button><button id="next" aria-label="ถัดไป">&rarr;</button></div>
 
 <script>
@@ -321,20 +356,20 @@ var imageSources = {
 
 var profiles = [
   {
-    title: 'Profile &amp; Lifestyle — [อาจาร์ยหนอน] (อายุ 54 ปี)',
+    title: 'Profile &amp; Lifestyle — [อาจารย์หนอน] (อายุ 54 ปี)',
     pics: ['profileA-1', 'profileA-2', 'profileA-3', 'profileA-4'],
     blocks: [
-      ['Character & Identity:', 'อาจาร์ย / นักวิจัย', 'ผู้ช่วยศาสตราจาร์ย', 'รักความสะอาด', 'ไม่มีของสะสม'], 
+      ['Character & Identity:', 'อาจารย์ / นักวิจัย', 'ผู้ช่วยศาสตราจารย์', 'รักความสะอาด', 'ไม่มีของสะสม'], 
       ['Daily Routine &amp; Habits:', 'นั่งอ่านหนังสือ', 'ทำความสะอาดบ้าน', 'เข้างานอาทิตย์ละ 2-3 ครั้ง', 'ให้ความสำคัญกับเวลานอนมาก'],
       ['Passions &amp; Activities:', 'เลี้ยงแมว 3 ตัว', 'เลี้ยงปลาหางนกยูง', 'ปลูกพืชผัก ทําเกษตร', 'สนใจที่จะเลี้ยงไก่ในอนาคต'],
       ['User need:', 'ต้องการพื้นที่เปิดโล่ง โปร่ง, ไร้ฝุ่น, มีความเป็นธรรมชาติ, ชอบแสงแดด,', 'มีอากาศหมุนเวียนและถ่ายเทได้ดี, มีครัวไทยที่ระบายอากาศได้ดี, และพื้นที่สำหรับสัตว์เลี้ยง']
     ]
   },
   {
-    title: 'Profile &amp; Lifestyle — [อาจาร์ยวิว] (อายุ 52 ปี)',
+    title: 'Profile &amp; Lifestyle — [อาจารย์วิว] (อายุ 52 ปี)',
     pics: ['profileB-1', 'profileB-2', 'profileB-3', 'profileB-4'],
     blocks: [
-      ['Character &amp; Identity:', 'อาจาร์ย', 'รองผู้อำนวยการโรงพยาบาลแห่งหนึ่ง'],
+      ['Character &amp; Identity:', 'อาจารย์', 'รองผู้อำนวยการโรงพยาบาลแห่งหนึ่ง'],
       ['Daily Routine &amp; Habits:', 'ชอบการดูแลสุขภาพและออกกำลังกาย', 'ทำงานนอกบ้านอาทิตย์ละ 2-3 ครั้ง'],
       ['Passions &amp; Activities:', 'อ่านหนังสือ', 'เล่นโยคะ', 'ร้องคาราโอเกะ', 'ชอบทำอาหารมาก'],
       ['User need:', 'ต้องการพื้นที่พักผ่อนที่สงบและเป็นส่วนตัว,', 'มีพื้นที่สำหรับฝึกโยคะ และห้องครัวที่เหมาะสำหรับการทำอาหาร']
@@ -347,7 +382,7 @@ var functions = [
   '1. Living Area', '2. Dining Area', '3. Kitchen Area',
   '4. Powder Room', '5. Master Bedroom + Walk in Closet',
   '6. Master Bathroom', '7. Bedroom 2 + Bathroom',
-  '8. Special Function', '9. Other Areas'
+  '8. Special Function (Cat / Work / Activity)', '9. Other Areas'
 ];
 var specials = [];
 
@@ -356,17 +391,21 @@ var moodColors = ['#E9DFCF', '#D0AD85', '#B66F4B', '#7F8967', '#4A382F'];
 
 // แต่ละห้อง ใส่ชื่อห้อง กับชื่อไฟล์รูป (ไม่ต้องใส่ .jpg)
 var rooms = [
-  {name: 'Living Area',       pics: ['living-1', 'living-2']},
-  {name: 'Dining Area',       pics: ['dining-1', 'dining-2']},
-  {name: 'Kitchen Area',      pics: ['kitchen-1', 'kitchen-2']}, //https://pin.it/5AuHpXMOX https://pin.it/3psDtb8iK
-  {name: 'Powder Room',       pics: ['powder-1', 'powder-2', 'powder-3']},
-  {name: 'Master Bedroom',    pics: ['bedroom-1', 'bedroom-2']},
-  {name: 'Walk in Closet',    pics: ['closet-1', 'closet-2']},
-  {name: 'Master Bathroom',   pics: ['bathroom-1', 'bathroom-2', 'bathroom-3']},
-  {name: 'Bedroom 2',         pics: ['bedroom2-1', 'bedroom2-2']},
-  {name: 'Bathroom 2',        pics: ['bathroom2-1', 'bathroom2-2']},
-  {name: 'Special Function',  pics: ['special-1', 'special-2']},
-  {name: 'Other Areas',       pics: ['laundry-1', 'other-1']}
+  {name: 'Living Area', description: 'ห้องนั่งเล่นที่ดูโปร่งและรับแสงธรรมชาติ เพื่อให้ใช้พักผ่อนและนั่งพูดคุยกับครอบครัวได้สบาย',       pics: ['living-1', 'living-2']},
+  {name: 'Dining Area', description: 'ห้องกินข้าวบรรยากาศอบอุ่นและจัดโต๊ะอาหารให้ใช้งานสะดวก เพราะเจ้าของบ้านชอบทำอาหารและใช้เวลาร่วมกัน',       pics: ['dining-1', 'dining-2']},
+  {name: 'Kitchen Area', description: 'ครัวที่มีพื้นที่เตรียมอาหารเพียงพอและระบายอากาศได้ดี เหมาะกับการทำอาหารเป็นประจำ',      pics: ['kitchen-1', 'kitchen-2']}, //https://pin.it/5AuHpXMOX https://pin.it/3psDtb8iK
+  {name: 'Powder Room', description: 'ห้องน้ำแขกที่เรียบง่ายและดูแลความสะอาดง่าย เพื่อให้คนในบ้านและแขกใช้งานสะดวก',       pics: ['powder-1', 'powder-2', 'powder-3']},
+  {name: 'Master Bedroom', description: 'ห้องนอนที่สงบ สีสบายตา และไม่ตกแต่งมากเกินไป เพื่อให้พักผ่อนได้เต็มที่',    pics: ['bedroom-1', 'bedroom-2']},
+  {name: 'Walk in Closet', description: 'การจัดเก็บเสื้อผ้าเป็นสัดส่วนและหยิบใช้ง่าย ช่วยให้ห้องเป็นระเบียบและทำความสะอาดสะดวก',    pics: ['closet-1', 'closet-2']},
+  {name: 'Master Bathroom', description: 'ห้องน้ำที่ดูโปร่งและแบ่งพื้นที่ใช้งานชัดเจน เพื่อให้ใช้งานได้อย่างสะดวกและดูแลรักษาง่าย',   pics: ['bathroom-1', 'bathroom-2', 'bathroom-3']},
+  {name: 'Bedroom 2', description: 'ห้องนอนที่เรียบง่ายและปรับการใช้งานได้ เพื่อรองรับสมาชิกในครอบครัวหรือแขกที่มาพัก',         pics: ['bedroom2-1', 'bedroom2-2']},
+  {name: 'Bathroom 2', description: 'พื้นที่ใช้งานที่ไม่ซับซ้อนและพื้นผิวทำความสะอาดง่าย เพื่อให้ผู้เข้าพักใช้งานได้สะดวก',        pics: ['bathroom2-1', 'bathroom2-2']},
+  {name: 'Special Function', description: 'แบ่งพื้นที่พิเศษตามกิจกรรมที่เจ้าของบ้านใช้งานจริง', pics: ['special-1', 'special-2'], specialZones: [
+     {title: 'CAT ROOM', thai: 'ห้องแมว', detail: 'พื้นที่สำหรับแมว 3 ตัว แยกมุมพักผ่อนและกระบะทราย เพื่อดูแลความสะอาดง่าย'},
+     {title: 'WORK & READING', thai: 'ห้องทำงาน / อ่านหนังสือ', detail: 'มุมสงบสำหรับอ่านหนังสือและทำงาน มีแสงธรรมชาติและไม่รบกวนพื้นที่พักผ่อน'},
+     {title: 'ACTIVITY SPACE', thai: 'พื้นที่กิจกรรม', detail: 'พื้นที่โล่งสำหรับโยคะ และปรับใช้ร้องคาราโอเกะได้ตามโอกาส'}
+   ]},
+  {name: 'Other Areas', description: 'พื้นที่ซักล้างและพื้นที่จอดรถ มีความทันสมัยและใช้งานง่าย',       pics: ['laundry-1', 'other-1']}
 ];
 
 /* =========================================================
@@ -473,6 +512,20 @@ for (var a = 0; a < profiles.length; a++) {
     '<div class="pgrid">' + pics + '</div>');
 }
 
+// หน้าใหม่: User Needs — ความต้องการของผู้อยู่อาศัยและครอบครัวที่มาเยี่ยม
+addSlide('User Needs',
+  '<div class="needs-layout">' +
+    '<div class="rv"><p class="mono"></p>' +
+      '<h1 class="needs-heading">USER NEEDS</h1>' +
+      '<p class="needs-intro">สรุปความต้องการของอาจารย์วิวและอาจารย์หนอน รวมถึงยายและหลานที่มาเยี่ยมเป็นครั้งคราว</p>' +
+      '<div class="needs-item"><strong>01 / พื้นที่พักผ่อน</strong><p>บ้านโปร่ง โล่ง รับแสงธรรมชาติ อากาศถ่ายเทดี และมีมุมสงบเป็นส่วนตัวสำหรับพักผ่อนและอ่านหนังสือ</p></div>' +
+      '<div class="needs-item"><strong>02 / พื้นที่ทำกิจกรรม</strong><p>มีพื้นที่สำหรับโยคะ ทำอาหาร และใช้เวลาร่วมกัน โดยครัวไทยต้องระบายกลิ่นและควันได้ดี</p></div>' +
+      '<div class="needs-item"><strong>03 / ธรรมชาติและสัตว์เลี้ยง</strong><p>มีพื้นที่ปลูกผัก เลี้ยงแมว 3 ตัวและปลาหางนกยูง โดยคำนึงถึงความสะอาดและการดูแลรักษา</p></div>' +
+      '<div class="needs-item"><strong>04 / ครอบครัวที่มาเยี่ยม</strong><p>มีพื้นที่นั่งพูดคุยและทำกิจกรรมกับคุณแม่และหลาน ทางเดินสะดวกและปลอดภัยสำหรับผู้สูงอายุ</p></div>' +
+    '</div>' +
+    '<div class="needs-visual rv">' + photo('family-visit') + '<div class="needs-photo-caption"></div></div>' +
+  '</div>');
+
 // หน้า 4: List of function
 function makeList(arr) {
   var out = '';
@@ -502,8 +555,12 @@ addSlide('Mood & Tone',
   '<div class="mid"><div>' +
     '<p class="mono rv">' + moodStyle + '</p>' +
     '<h1 class="title big rv">Mood &amp; Tone</h1>' +
+    '<p class="mood-style-label rv">MODERN NATURAL</p>' +
+    '<p class="mood-description rv">เลือกออกแบบบ้านสไตล์ Modern Natural ผสมความเรียบง่ายทันสมัยกับความเป็นธรรมชาติ ใช้สีครีม น้ำตาล เขียวหม่น และวัสดุไม้ เพื่อสร้างบรรยากาศอบอุ่น สงบ และเหมาะกับการพักผ่อน</p>' +
   '</div></div>' +
   '<div class="palette rv">' + dots + '</div>');
+
+slides[slides.length - 1].classList.add('mood-slide');
 
 // หน้า 6-16: ห้องและพื้นที่ทั้งหมดตามโจทย์
 for (var r = 0; r < rooms.length; r++) {
@@ -512,7 +569,7 @@ for (var r = 0; r < rooms.length; r++) {
   var total = '0' + rooms.length;
   addSlide(room.name,
     strips(room.pics) +
-    '<div class="mid"><h1 class="title big rv">' + room.name + '</h1></div>' +
+    '<div class="mid"><div><h1 class="title big rv">' + room.name + '</h1>' + (room.specialZones ? '<p class="special-intro rv">' + room.description + '</p><div class="special-zones">' + room.specialZones.map(function(zone){return '<div class="special-zone rv"><span class="en">' + zone.title + '</span><strong>' + zone.thai + '</strong><p>' + zone.detail + '</p></div>';}).join('') + '</div>' : '<p class="room-description rv">' + room.description + '</p>') + '</div></div>' +
     '<p class="mono roomno rv">Room ' + num + ' / ' + total + '</p>');
 }
 
@@ -521,7 +578,8 @@ for (var r = 0; r < rooms.length; r++) {
 var roomLightbox = document.getElementById('room-lightbox');
 function closeRoomLightbox(){roomLightbox.classList.remove('open');}
 for (var ri = 0; ri < rooms.length; ri++) {
-  slides[5 + ri].classList.add('room-slide');
+  slides[6 + ri].classList.add('room-slide');
+  if (rooms[ri].specialZones) slides[6 + ri].classList.add('special-slide');
 }
 
 // หน้าสุดท้าย: Thank You — cinematic typography แบบหน้าปก ไม่มีรูปภาพ
